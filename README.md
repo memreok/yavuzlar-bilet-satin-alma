@@ -8,7 +8,7 @@
 
 ```
 git clone https://github.com/memreok/bilet-satin-alma.git
-cd bilet-satin-alma
+cd yavuzlar-bilet-satin-alma
 docker compose up --build -d
 ```
 Congrats!
