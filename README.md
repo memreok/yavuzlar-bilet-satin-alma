@@ -7,7 +7,7 @@
 ### 1) Run these commands
 
 ```
-git clone https://github.com/memreok/bilet-satin-alma.git
+git clone https://github.com/memreok/yavuzlar-bilet-satin-alma.git
 cd yavuzlar-bilet-satin-alma
 docker compose up --build -d
 ```
