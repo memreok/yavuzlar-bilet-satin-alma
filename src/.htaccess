@@ -1,0 +1,40 @@
+
+AddDefaultCharset UTF-8
+Options -Indexes
+
+
+RewriteEngine On
+
+
+RewriteEngine On
+
+ErrorDocument 403 /error.php
+ErrorDocument 404 /error.php
+ErrorDocument 500 /error.php
+ErrorDocument 503 /error.php
+
+RewriteBase /
+
+RewriteBase /
+
+<FilesMatch "(\.(bak|config|sql|fla|psd|ini|log|sh|inc|swp|env)|~)$|^(LICENSE|README\.md|Dockerfile|docker-compose\.yml|composer\.json)$">
+    Require all denied
+</FilesMatch>
+<Files ".htaccess">
+    Require all denied
+</Files>
+<IfModule mod_headers.c>
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-Content-Type-Options "nosniff"
+    Header set Content-Security-Policy "default-src 'self';"
+</IfModule>
+
+RewriteCond %{REQUEST_METHOD} !POST [NC]
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [L]

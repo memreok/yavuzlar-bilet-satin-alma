@@ -1,0 +1,23 @@
+{
+  "name": "bilet-satin-alma",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/css/input.css -o ./public/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/memreok/bilet-satin-alma.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/memreok/bilet-satin-alma/issues"
+  },
+  "homepage": "https://github.com/memreok/bilet-satin-alma#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.18"
+  }
+}

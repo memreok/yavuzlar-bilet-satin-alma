@@ -1,0 +1,10 @@
+{
+    "name": "memreok/bilet-satin-alma",
+    "description": "PHP ile bilet satın alma projesi.",
+    "authors": [
+        {
+            "name": "memreok",
+            "email": "mehmetemreok2@gmail.com"
+        }
+    ]
+}
